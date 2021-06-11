@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;500&display=swap");
+* {
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+*:active {
+  outline: none;
+}
+
+html,
+body {
+  font-family: Poppins, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: #189ffa;
+  font-weight: bold;
+  color: white;
+  border-radius: 0 0 25px 25px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+header > h1 {
+  text-align: center;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+h2 {
+  padding-top: 35px;
+  color: white;
+  text-align: center;
+}
+
+.input-section {
+  background: #189ffa;
+  margin: 0 100px;
+  border-radius: 25px 25px 0 0;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.input-section label {
+  color: white;
+}
+
+input[type="text"],
+input[type="number"] {
+  color: #189ffa;
+  height: 40px;
+  border: 0 solid;
+  border-radius: 25px;
+  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 0 20px;
+}
+
+input:active {
+  color: #189ffa;
+}
+
+form {
+  margin: 30px 30px 0 30px;
+  padding-bottom: 30px;
+}
+
+.container-flex-baris {
+  text-align: left;
+  margin-top: 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.tulisan {
+  flex-basis: 200px;
+}
+
+.inputan {
+  flex-grow: 3;
+}
+
+.button-submit {
+  background-color: white;
+  color: #189ffa;
+  font-size: larger;
+  flex-grow: 1;
+  height: 40px;
+  border: 0 solid;
+  border-radius: 25px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 0 20px;
+}
+
+.button-submit:active {
+  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.search-section {
+  text-align: center;
+  background: white;
+  border: #189ffa solid;
+  margin: 0 100px;
+  border-radius: 0 0 25px 25px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 30px;
+}
+
+.search-section h2 {
+  color: #189ffa;
+  text-align: center;
+  margin: 0;
+  padding-top: 35px;
+}
+
+#searchBookTitle {
+  border-radius: 25px 0 0 25px;
+  margin-right: -10px;
+  width: 300px;
+  border: #aaaaaa solid;
+  border-width: 1px;
+}
+#searchSubmit {
+  background-color: #189ffa;
+  font-size: medium;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border: 0 solid;
+  border-radius: 0 25px 25px 0;
+  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+#searchSubmit:active {
+  background-color: #189ffa;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border: 0 solid;
+  border-radius: 0 25px 25px 0;
+  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+h3 {
+  margin-top: 0;
+  color: #189ffa;
+}
+
+.book-shelf {
+  text-align: center;
+  background: white;
+  border: #aaaaaa solid;
+  border-width: thin;
+  margin: 0 30px;
+  border-radius: 25px;
+  margin-bottom: 30px;
+}
+
+.book-item {
+  border: #aaaaaa solid;
+  border-width: thin;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 25px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn-blue {
+  background-color: #189ffa;
+  margin-right: -3px;
+  padding-right: 0;
+  font-size: medium;
+  color: white;
+  width: 200px;
+  height: 40px;
+  border: 0 solid;
+  border-radius: 25px 0 0 25px;
+  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn-grey {
+  background-color: #aaaaaa;
+  margin-left: -3px;
+  padding-right: 0;
+  font-size: medium;
+  color: white;
+  width: 200px;
+  height: 40px;
+  border: 0 solid;
+  border-radius: 0 25px 25px 0;
+  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn-blue:active,
+.btn-grey:active {
+  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+p {
+  color: #aaaaaa;
+}
