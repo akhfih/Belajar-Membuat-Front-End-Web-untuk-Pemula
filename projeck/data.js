@@ -1,4 +1,4 @@
-const STORAGE_KEY = "TODO_APPS";
+const STORAGE_KEY = "BOOKSHELF_APPS";
 let books = [];
 
 function isStorageExist() {
@@ -10,7 +10,7 @@ function isStorageExist() {
 }
 
 function saveData() {
-  const parsed /* string */ = JSON.stringify(books);
+  const parsed = JSON.stringify(books);
   console.log(parsed);
   localStorage.setItem(STORAGE_KEY, parsed);
   document.dispatchEvent(new Event("ondatasaved"));
@@ -28,30 +28,27 @@ function composeBookObject(title, author, tahun, isComplete) {
 
 function updateDataToStorage() {
   if (isStorageExist()) saveData();
+
+  location.reload();
 }
 
-function loadDataFromStorage() {
-  const serializedData = localStorage.getItem(STORAGE_KEY);
-  let data = JSON.parse(serializedData);
-  console.log(data);
-  if (data !== null) books = data;
-  document.dispatchEvent(new Event("ondataloaded"));
-}
-
-function loadDataSearch(title = null) {
+function loadData(title = null) {
   const serializedData = localStorage.getItem(STORAGE_KEY);
   let data = JSON.parse(serializedData);
 
   if (data !== null) {
     if (title || title === "") {
+      const toUpperCaseTitle = title.toUpperCase();
       const dataSearch = data.filter(function (item) {
         const obj = Object.values(item.title);
-        return obj.join("").indexOf(title) !== -1;
+        return obj.join("").indexOf(toUpperCaseTitle) !== -1;
       });
+      console.log(books);
       console.log(dataSearch);
       books = dataSearch;
       resetItem();
       document.dispatchEvent(new Event("ondataloaded"));
+      books = data;
     } else {
       books = data;
       document.dispatchEvent(new Event("ondataloaded"));

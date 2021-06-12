@@ -35,8 +35,7 @@
                     <input class="" id="inputBookIsComplete" type="checkbox">
                 </div>
                 <div class="container-flex-baris">
-                    <input class="button-submit" id="submitBook" type="submit"
-                        value="MASUKKAN KE RAK BELUM SELESAI DIBACA">
+                    <input class="button-submit" id="submitBook" type="submit" value="MASUKKAN KE RAK BELUM SELESAI">
                 </div>
             </form>
         </section>
@@ -50,39 +49,25 @@
 
             <section id="incomplete" class="book-shelf">
                 <h2>Belum selesai dibaca</h2>
-                <div id="incompleteBookshelfList" class="book-list">
-                    <!-- <article class="book-item">
-                        <h3>Book Title</h3>
-                        <p>John Doe</p>
-                        <p>2002</p>
-
-                        <div class="action">
-                            <button class="btn-blue">Selesai</button>
-                            <button class="btn-grey">Hapus</button>
-                        </div>
-                    </article> -->
-
-                </div>
+                <div id="incompleteBookshelfList" class="book-list"></div>
             </section>
 
             <section id="complete" class="book-shelf">
                 <h2>Selesai dibaca</h2>
-                <div id="completeBookshelfList" class="book-list">
-                    <!-- <article class="book-item">
-                        <h3>Book Title</h3>
-                        <p>Penulis: John Doe</p>
-                        <p>Tahun: 2002</p>
-
-
-                        <button class="green">Belum</button>
-                        <button class="red">Hapus</button>
-
-                    </article> -->
-                </div>
+                <div id="completeBookshelfList" class="book-list"></div>
             </section>
 
         </section>
+
     </main>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h3>Yakin nih mau di hapus Brey..!</h3>
+            <button id="hapus" class="btn-blue">YA</button>
+            <button id="batal" class="btn-grey">BATAL</button>
+        </div>
+
+    </div>
 
     <script src="script.js"></script>
     <script src="dom.js"></script>

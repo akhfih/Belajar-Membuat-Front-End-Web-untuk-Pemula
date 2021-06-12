@@ -3,6 +3,7 @@
   box-sizing: border-box;
   text-transform: uppercase;
   font-weight: bold;
+  letter-spacing: 2px;
 }
 
 *:active {
@@ -11,6 +12,7 @@
 
 html,
 body {
+  background-color: #aaaaaa33;
   font-family: Poppins, sans-serif;
   margin: 0;
   padding: 0;
@@ -23,6 +25,8 @@ header {
   color: white;
   border-radius: 0 0 25px 25px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  top: 0;
+  position: sticky;
 }
 
 header > h1 {
@@ -35,6 +39,10 @@ h2 {
   padding-top: 35px;
   color: white;
   text-align: center;
+}
+
+.book-shelf > h2 {
+  padding-bottom: 35px;
 }
 
 .input-section {
@@ -202,4 +210,58 @@ h3 {
 
 p {
   color: #aaaaaa;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.521); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  text-align: center;
+  border-radius: 25px;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 50px;
+  width: 80%;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 800px) {
+  .input-section,
+  .search-section {
+    margin: 0 10px;
+  }
+
+  .search-section {
+    margin-bottom: 10px;
+  }
+
+  .button-submit {
+    font-size: medium;
+    width: 80%;
+  }
+
+  .btn-blue,
+  .btn-grey {
+    width: 150px;
+    font-size: small;
+  }
+  #searchBookTitle {
+    width: 200px;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
 }

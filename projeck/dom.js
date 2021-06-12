@@ -70,7 +70,7 @@ function addBook() {
   );
 
   const bookObject = composeBookObject(
-    textInputBookTitle,
+    textInputBookTitle.toUpperCase(),
     textInputBookAuthor,
     textInputBookTahun,
     InputBookComplete
@@ -124,6 +124,7 @@ function undoBookFromCompleted(bookElement) {
 
   newBook = makeBook(textTitle, textAuthor, textTahun, InputBookComplete);
   const book = findBook(bookElement[BOOK_ITEMID]);
+  console.log(books);
   book.isCompleted = InputBookComplete;
   newBook[BOOK_ITEMID] = book.id;
   bookIncomplete.append(newBook);
@@ -133,10 +134,25 @@ function undoBookFromCompleted(bookElement) {
 
 function removeBook(bookElement) {
   const bookPosition = findBookIndex(bookElement[BOOK_ITEMID]);
-  books.splice(bookPosition, 1);
-  alert("yakin nih mau dihpaus brey!");
-  bookElement.remove();
-  updateDataToStorage();
+
+  const modal = document.getElementById("modal");
+  const btnYa = document.getElementById("hapus");
+  const btnBatal = document.getElementById("batal");
+  modal.style.display = "block";
+  btnBatal.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+  btnYa.addEventListener("click", function () {
+    modal.style.display = "none";
+    books.splice(bookPosition, 1);
+    bookElement.remove();
+    updateDataToStorage();
+  });
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
 }
 
 function resetItem() {
@@ -184,5 +200,5 @@ function refreshDataFromTodos() {
 function cariJudulBook() {
   const searchTitle = document.getElementById("searchBookTitle").value;
 
-  loadDataSearch(searchTitle);
+  loadData(searchTitle);
 }

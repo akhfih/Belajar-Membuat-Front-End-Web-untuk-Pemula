@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   if (isStorageExist()) {
-    loadDataFromStorage();
+    loadData();
   }
 });
 
