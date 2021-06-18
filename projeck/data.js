@@ -11,9 +11,9 @@ function isStorageExist() {
 
 function saveData() {
   const parsed = JSON.stringify(books);
-  console.log(parsed);
   localStorage.setItem(STORAGE_KEY, parsed);
   document.dispatchEvent(new Event("ondatasaved"));
+  location.reload();
 }
 
 function composeBookObject(title, author, tahun, isComplete) {
@@ -28,8 +28,6 @@ function composeBookObject(title, author, tahun, isComplete) {
 
 function updateDataToStorage() {
   if (isStorageExist()) saveData();
-
-  location.reload();
 }
 
 function loadData(title = null) {
@@ -43,8 +41,6 @@ function loadData(title = null) {
         const obj = Object.values(item.title);
         return obj.join("").indexOf(toUpperCaseTitle) !== -1;
       });
-      console.log(books);
-      console.log(dataSearch);
       books = dataSearch;
       resetItem();
       document.dispatchEvent(new Event("ondataloaded"));
@@ -54,7 +50,7 @@ function loadData(title = null) {
       document.dispatchEvent(new Event("ondataloaded"));
     }
   } else {
-    alert("Tidak ada data yang tersimpan");
+    console.log("Tidak ada data yang tersimpan");
   }
 }
 

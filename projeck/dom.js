@@ -124,7 +124,6 @@ function undoBookFromCompleted(bookElement) {
 
   newBook = makeBook(textTitle, textAuthor, textTahun, InputBookComplete);
   const book = findBook(bookElement[BOOK_ITEMID]);
-  console.log(books);
   book.isCompleted = InputBookComplete;
   newBook[BOOK_ITEMID] = book.id;
   bookIncomplete.append(newBook);
@@ -176,7 +175,7 @@ function resetItem() {
   complete.append(articleComplete);
 }
 
-function refreshDataFromTodos() {
+function refreshDataFromBooks() {
   const bookComplete = document.getElementById(COMPLETED_LIST_BOOK_ID);
   const bookIncomplete = document.getElementById(INCOMPLETED_LIST_BOOK_ID);
 

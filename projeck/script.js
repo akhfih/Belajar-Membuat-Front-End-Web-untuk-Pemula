@@ -33,5 +33,5 @@ document.addEventListener("ondatasaved", () => {
 });
 
 document.addEventListener("ondataloaded", () => {
-  refreshDataFromTodos();
+  refreshDataFromBooks();
 });
